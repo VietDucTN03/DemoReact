@@ -24,6 +24,7 @@ import UserTemplate from './templates/UserTemplate';
 import Register from './Pages/Register';
 import Admin from './Pages/Admin';
 import ReactForm from './Pages/ReactForm/ReactForm';
+import ReactLifeCycle from './Pages/ReactLifeCycle/ReactLifeCycle';
 
 //Tạo root trên thẻ div#root
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -54,7 +55,8 @@ root.render(
             <Route path='login' element={<Login /> }></Route>
 
             <Route path='react-form' element={<ReactForm/>}></Route>
-            
+
+            <Route path='react-life-cycle' element={<ReactLifeCycle/>}></Route>
           </Route>
           <Route path='user' element={<UserTemplate/>}>
             <Route index element={<Login/>}></Route>
