@@ -37,6 +37,9 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import ChangeNumberRedux from "./DemoRedux/ChangeNumberRedux";
 import ChangeCarColorRedux from "./DemoRedux/ChangeCarColorRedux";
+import ChangeFontSizeRedux from "./DemoRedux/ChangeFontSizeRedux";
+import BaiTapGioHangRedux from "./DemoRedux/BaiTapGioHangRedux/BaiTapGioHangRedux";
+import DanhSachSanPhamRedux from "./DemoRedux/BaiTapGioHangRedux/DanhSachSanPhamRedux";
 
 //Tạo root trên thẻ div#root
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -62,7 +65,7 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="" element={<HomeTemplates />}>
-            <Route index element={<div>Home Page</div>}></Route>
+            <Route index element={<DanhSachSanPhamRedux/>}></Route>
             <Route path="gio-hang" element={<BaiTapGioHang />}></Route>
             <Route path="bt-car-color" element={<ChangeCarColor />}></Route>
             <Route path="login" element={<Login />}></Route>
@@ -74,6 +77,10 @@ root.render(
             <Route path="redux-change-number" element={<ChangeNumberRedux />}></Route>
 
             <Route path="redux-change-car" element={<ChangeCarColorRedux />}></Route>
+
+            <Route path="redux-change-font-size" element={<ChangeFontSizeRedux/>}></Route>
+
+            <Route path="redux-gio-hang" element={<BaiTapGioHangRedux/>}></Route>
           </Route>
           <Route path="user" element={<UserTemplate />}>
             <Route index element={<Login />}></Route>
